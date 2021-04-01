@@ -10,7 +10,7 @@
 
     <body>
         <div class="container">
-            <a class="btn btn-primary" href="/save">
+            <a class="btn btn-primary" href="/add">
                 Nouvelle recette
             </a>
             
@@ -18,8 +18,8 @@
 
             <div class="row g-4">
                 <?php foreach ($recipes as $recipe) : ?>
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <?= $recipe['title'] ?>
@@ -33,7 +33,7 @@
                                     Supprimer
                                 </a>
 
-                                <a class="ms-1 my-2 btn btn-primary" href="/save?id=<?= $recipe['id'] ?>">
+                                <a class="ms-1 my-2 btn btn-primary" href="/edit?id=<?= $recipe['id'] ?>">
                                     Editer
                                 </a>
                             </div>
